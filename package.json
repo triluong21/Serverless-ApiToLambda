@@ -1,0 +1,28 @@
+{
+  "name": "ApiToLambda",
+  "version": "1.0.0",
+  "main": "Start.ts",
+  "license": "MIT",
+  "scripts": {
+    "test": "node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.spec.ts\" -t 10000 --require ts-node/register --require mocha.env --reporter spec",
+    "watch": "node_modules/.bin/mocha \"./{,!(node_modules)/**/}*.spec.ts\" -t 10000 --require ts-node/register --require mocha.env --reporter spec --watch-extensions ts --watch",
+    "build": "node_modules/.bin/webpack",
+    "lint": "node_modules/.bin/tslint *.js"
+  },
+  "dependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^10.12.21",
+    "babel-loader": "^8.0.5",
+    "serverless": "^1.36.3",
+    "ts-lint": "^4.5.1",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.1",
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1"
+  },
+  "devDependencies": {
+    "serverless-offline": "^4.2.1"
+  }
+}
